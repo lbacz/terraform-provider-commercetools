@@ -99,6 +99,7 @@ func resourceChannelRead(d *schema.ResourceData, m interface{}) error {
 	}
 
 	d.SetId(channel.ID)
+	d.Set("key", channel.Key)
 	d.Set("version", channel.Version)
 
 	if channel.Name != nil {
